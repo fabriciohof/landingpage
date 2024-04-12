@@ -1,0 +1,34 @@
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .header-botao-esquerdo,
+    .header-botao-direito {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-botao-esquerdo {
+        margin-left: 10px;
+        margin-top: 50px;
+    }
+    
+    .header-botao-esquerdo h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .header-botao-esquerdo p {
+        margin-bottom: 10px;
+    }
+    
+    .header-botao-esquerdo button {
+        padding: 0.6rem 2.8rem;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .header-botao-direito img {
+        width: 200px;
+    }
+}

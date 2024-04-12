@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achadinhos</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="javascript/script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="header-nav">
+            <h1>Meu <span>site</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Home</a></li>
+                    <li><a href="#conteudo">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="icone-compras">
+                <i id="icone-compras" class="bi bi-bag"></i>
+                <div id="lista-compras" class="lista-compras" style="display: none;">
+                    <ul>
+                        <li><a href="">Amazon</a></li>
+                        <li><a href="">Shopee</a></li>
+                        <li><a href="">Mercado Livre</a></li>
+                    </ul>
+                </div>
+            </div>              
+        </div>
+    </div>
+
+
+    
+    
+
+<header id="inicio">
+        <div class="content">
+            <div class="header-botao">
+                <div class="header-botao-esquerdo">
+                    <h2>Titulo aqui</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis cupiditate facilis <br> molestiae dignissimos reprehenderit qui, tempora alias, id nisi aperiam quo <br> rem itaque quas laborum aliquid earum in sunt eius?</p>
+                    <button>Ver agora</button>
+
+                </div>
+                <div class="header-botao-direito">
+                    <img src="imgs/dedo.png" alt="mão">
+                </div>
+
+            </div>
+
+        </div>
+</header>
+
+
+<main id="conteudo">
+        <div class="fundo">
+            <div class="content-pag">
+                <div class="colunas-pag">
+                <img src="imgs/acer-nitro.png" alt="Acer nitro 5">
+                <img src="imgs/headset.png" alt="Headset Redragon">
+                <img src="imgs/mouse.png" alt="Mouse g305 sem fio">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="content-pag">
+                <h2>Melhores Ofertas</h2>
+                <div class="subtitulo-underline">
+
+                </div>
+                <div class="colunas-pag">
+                    <div class="produtos-pag">
+                            <img src="imgs/smartwatch.png" alt="Smartwatch">
+                            <p class="nome-produto">Smartwatch Amazfit Blue</p>
+                            <p class="preco-produto">Colocar preço aqui</p>
+                    </div>
+
+                    <div class="produtos-pag">
+                        <img src="imgs/ssd.png" alt="Ssd Wd Green 1TB">
+                        <p class="nome-produto">SSD Wd Green 1TB</p>
+                        <p class="preco-produto">Colocar preço aqui</p>
+                    </div>
+
+                    <div class="produtos-pag">
+                        <img src="imgs/mousepad.png" alt="Mousepad RGB">
+                        <p class="nome-produto">Mousepad Grande RGB</p>
+                        <p class="preco-produto">Colocar preço aqui</p>
+                    </div>                    
+
+                </div>
+            </div>
+
+        </div>
+
+
+</main>
+
+<footer id="contato">
+        <div class="footer-content">
+            <h3>Desenvolvido por <span>Fabrício Formentini</span></h3> 
+            <div class="social-media">
+                <a href="https://www.instagram.com/formentinii/?hl=pt-br" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/@formentinii" target="_blank"><i class="bi bi-tiktok"></i></a>
+            </div>  
+        </div>
+        <div class="copy-underline"></div>
+        <div class="copyright">
+            <i class="bi bi-c-circle"></i>
+            <p>Copyright | Todos os direitos reservados</p>
+        </div>
+</footer>  
+
+<script>
+    document.getElementById('icone-compras').addEventListener('click', function(event) {
+        event.stopPropagation(); // Impede que o evento de clique seja propagado para o contêiner pai
+        
+        var listaCompras = document.getElementById('lista-compras');
+        var iconeCompras = document.getElementById('icone-compras');
+        
+        // Alternar a exibição da lista de compras
+        if (listaCompras.style.display === 'none') {
+            listaCompras.style.display = 'block';
+            listaCompras.style.top = (iconeCompras.offsetTop + iconeCompras.offsetHeight) + 'px'; // Posiciona a lista abaixo do ícone
+            listaCompras.style.left = iconeCompras.offsetLeft + 'px'; // Mantém a lista na mesma posição horizontal do ícone
+        } else {
+            listaCompras.style.display = 'none';
+        }
+    });
+
+    // Fecha a lista de compras se clicar fora dela
+    window.addEventListener('click', function(event) {
+        var listaCompras = document.getElementById('lista-compras');
+        if (event.target !== listaCompras && event.target !== document.getElementById('icone-compras')) {
+            listaCompras.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
