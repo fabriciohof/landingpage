@@ -1,248 +1,307 @@
-/* Reset CSS */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-weight: 400;
 }
 
 /* Estilos básicos */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
 
-/* Navbar */
-.navbar {
-    background-color: orange;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.575);
+.interface{
+    max-width: 1280px;
+    margin: auto;
+
 }
 
-.navbar div {
+.flex {
+    display: flex;
+}
+
+
+/* Header */
+
+header{
+    padding: 40px ;
+    padding-left:30px;
+    background: orange;
+    
+}
+
+header > .interface{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    
 }
 
-.navbar h1 {
+header h1 {
     color: blueviolet;
 }
 
-.navbar a {
+header a {
+    color: black;
     text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    color: blueviolet;
+    transform: scale(1.3);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav li {
+    display: inline-block;
+    padding-left: 50px;
+}
+
+
+/* Menu Mobile */
+.botao-abrir-menu i{
+    color: black;
+    font-size: 40px;
+    display: none;
+}
+
+.menu-mobile {
+    background: linear-gradient(to right, rgba(32, 46, 51, 0.8));
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow-x: hidden;
+    transition: .4s;
+}
+
+.menu-mobile.abrir-menu{    /* javascript para abrir menu */
+    width: 60%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .botao-fechar{
+    padding: 20px 6%;
+}
+
+.menu-mobile .botao-fechar i {
+    color: #0056b3;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+
+}
+
+.menu-mobile nav ul li {
+    display: block;
+}
+
+.menu-mobile nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 20px 18%;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #007bff;
     color: black;
 }
 
-.header-nav {
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.808);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+
+/* Main */
+
+/* Estilos para o resumo do site */
+.resumo {
+    background-color: #f9f9f9; /* Cor de fundo do resumo */
+    padding: 50px 0; /* Espaçamento interno do resumo */
+    text-align: center; /* Centraliza o conteúdo do resumo */
+}
+
+.resumo .container {
+    max-width: 1200px; /* Largura máxima do contêiner do resumo */
+    margin: auto; /* Centraliza o contêiner do resumo */
+}
+
+.resumo h1 {
+    color: #333; /* Cor do título do resumo */
+    font-size: 2.5rem; /* Tamanho do título do resumo */
+    margin-bottom: 20px; /* Espaçamento abaixo do título do resumo */
+}
+
+.resumo p {
+    color: #666; /* Cor do texto do resumo */
+    font-size: 1.2rem; /* Tamanho do texto do resumo */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto do resumo */
+}
+
+.resumo .btn {
+    display: inline-block; /* Permite que o botão ocupe apenas o espaço necessário */
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    border-radius: 5px; /* Borda arredondada do botão */
+}
+
+.resumo .btn:hover {
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+
+section {
+    padding: 50px 0; /* Adiciona um espaçamento interno nas seções */
+}
+
+.container {
     max-width: 1200px;
     margin: auto;
+    padding: 0 20px; /* Adiciona um espaçamento interno nas seções */
 }
 
-nav ul {
+h2 {
+    color: #333; /* Cor do título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px; /* Adiciona espaço abaixo do título */
+}
+
+/* Estilos para os produtos */
+
+/* Estilos para os produtos em destaque */
+
+.produtos {
     display: flex;
-    list-style-type: none;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui os produtos igualmente na linha */
+    gap: 30px; /* Adiciona espaçamento entre os produtos */
 }
 
-nav ul li {
-    color: black;
-    margin: 1.2rem;
-    cursor: pointer;
+.produto {
+    width: calc(33.33% - 20px); /* Largura dos produtos */
+    text-align: center; /* Centraliza o conteúdo do produto */
+    border: 1px solid rgba(0, 0, 0, 0.562); /* Adiciona uma borda */
+    border-radius: 8px; /* Arredonda as bordas */
+    padding: 30px; /* Adiciona um espaçamento interno */
+    box-sizing: border-box; /* Considera a borda e o preenchimento como parte do tamanho total */
+    padding-bottom: 10px;
 }
 
-nav ul li:hover {
-    transform: translateY(-5px);
-    transition: ease .2s;
-    font-weight: bold;
+.produto a {
+    text-decoration: none;
 }
 
-.icons-nav {
-    display: flex;
-    align-items: center;
+.produto img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Permite que a altura da imagem seja ajustada automaticamente */
+    margin-bottom: 15px; /* Adiciona espaço abaixo da imagem */
 }
 
-.icons-nav i {
-    width: 30px;
-    cursor: pointer;
+.produto h3 {
+    margin-bottom: 10px; /* Adiciona espaço abaixo do título */
 }
 
-/* HEADER */
-header {
-    background-image: radial-gradient(#ffff, #c7c7c7);
-}
-
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    overflow: hidden;
-}
-
-.header-botao-esquerdo {
-    height: 100%;
-    align-items: center;
-    float: left;
-    margin-left: 200px;
-    margin-top: 100px;
-}
-
-.header-botao-direito {
-    display: flex;
-    float: right;
-    align-items: center;
-    justify-content: center;
-    margin-left: 200px;
-}
-
-.header-botao-esquerdo h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.header-botao-esquerdo p {
-    line-height: 1.5rem;
+.produto p {
+    color: #666;
     margin-bottom: 20px;
 }
 
-.header-botao-esquerdo button {
-    background-color: rgba(255, 166, 0, 0.783);
-    color: black;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0px 0px 0px 1px black;
-    padding: 0.8rem 3.8rem;
-    margin-bottom: 20px;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: ease .2s;
+.produto .preco {
+    font-weight: bold; /* Deixa o preço em negrito */
+    color: #333; /* Cor do preço */
 }
 
-.header-botao-esquerdo button:hover {
-    background-color: rgba(247, 238, 65, 0.826);
-}
-
-.header-botao-direito img {
-    width: 300px;
-    border: none;
-    border-radius: 30px;
-}
-
-/* MAIN */
-main {
-    background-color: rgba(222, 209, 209, 0.605);
-}
-
-.fundo {
-    background-color: rgba(232, 31, 243, 0.386);
-}
-
-.content-pag h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-top: 4rem;
-}
-
-.subtitulo-underline {
-    width: 15%;
-    height: 3px;
-    background-color: blue;
-    border-radius: 100px;
-    margin: 8px auto 0 auto;
-}
-
-.content-pag {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.colunas-pag {
-    display: grid;
-    justify-content: space-evenly;
-    padding: 4rem 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.colunas-pag div {
-    cursor: pointer;
-    transition: ease .2s;
-}
-
-.colunas-pag div:hover {
-    transform: translateY(-5px);
-}
-
-.colunas-pag img {
-    width: 100%;
-}
-
-.produtos-pag {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-}
-
-.produtos-pag img {
-    width: 100%;
-    margin-bottom: 10px;
-    margin-left: 60px;
-    width: 200px;
-
-}
-
-.produtos-pag p {
-    margin-top: 10px;
-    text-align: center;
-    margin-right: 60px;
-}
-
-.nome-produto {
+.produto button {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Adiciona um espaçamento interno no botão */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+    border-radius: 5px; /* Borda arredondada do botão */
     font-weight: 600;
+    margin-top: 10px;
 }
 
-.preco-produto {
-    font-size: 1.2rem;
+.produto button:hover {
+    background-color: #0056b3; 
 }
 
-.icone-compras {
-    position: relative; /* Defina a posição como relativa */
-    cursor: pointer;
+
+#recado {
+    background-color: #f9f9f9; /* Cor de fundo */
+    padding: 50px 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
 }
 
-.lista-compras {
-    position: absolute;
-    top: calc(100% + 5px); /* Posição abaixo do ícone com um pequeno espaço */
-    left: 0;
-    background-color: #f9f9f9; /* Cor de fundo da lista */
-    border: 1px solid #ccc; /* Borda da lista */
+#recado .container {
+    max-width: 800px; /* Largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner */
+}
+
+#recado h2 {
+    color: #333; /* Cor do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+#recado p {
+    color: #666; /* Cor do texto */
+    font-size: 1.1rem; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto */
+}
+
+#recado ul {
+    list-style: none; /* Remove a marcação da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    display: flex; /* Exibe os itens da lista em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+#recado ul li {
+    margin: 0 10px; /* Espaçamento entre os itens da lista */
+}
+
+#recado ul li a {
+    color: #007bff; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    padding: 10px 20px; /* Espaçamento interno dos links */
+    border: 1px solid #007bff; /* Adiciona uma borda ao redor dos links */
     border-radius: 5px; /* Borda arredondada */
-    padding: 10px; /* Espaçamento interno */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave de cores */
 }
 
-.lista-compras ul {
-    list-style-type: none; /* Remover estilos de lista padrão */
-    padding: 0;
+#recado ul li a:hover {
+    background-color: #007bff; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
 }
 
-.lista-compras li {
-    margin-bottom: 5px; /* Espaçamento entre os itens da lista */
-}
-
-.lista-compras a {
-    text-decoration: none; /* Remover sublinhado dos links */
-    color: #333; /* Cor do texto dos links */
-    display: block; /* Transformar o link em um bloco para preencher toda a largura do item da lista */
-    padding: 5px; /* Espaçamento interno dos links */
-    border-radius: 3px; /* Borda arredondada nos links */
-}
-
-.lista-compras a:hover {
-    background-color: #ddd; /* Cor de fundo ao passar o mouse sobre os links */
-}
 
 
 
@@ -263,12 +322,14 @@ footer {
 }
 .footer-content h3 {
     margin-bottom: 5px;
-    cursor: pointer;
     transition: color 0.3s ease;
 }
 
+
+
 .footer-content span:hover {
     color: #ff5e3a; 
+    cursor: pointer;
 }
 
 .social-media a {

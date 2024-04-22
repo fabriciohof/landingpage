@@ -7,99 +7,184 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/mediaquery.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="javascript/script.js"></script>
+    <script src="javascript/index.js" defer></script>
 </head>
 <body>
-    <div class="navbar">
-        <div class="header-nav">
-            <h1>Meu <span>site</span></h1>
-            <nav>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <h1>Achadinhos na Net</h1>
+            </div>
+
+            <nav class="menu">
                 <ul>
-                    <li><a href="#inicio">Home</a></li>
-                    <li><a href="#conteudo">Produtos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#amazon">Amazon</a></li> 
+                    <li><a href="#mercadolivre">Mercado Livre</a></li> 
+                    <li><a href="#shopee">Shopee</a></li> 
+                    
                 </ul>
             </nav>
 
-            <div class="icone-compras">
-                <i id="icone-compras" class="bi bi-bag"></i>
-                <div id="lista-compras" class="lista-compras" style="display: none;">
-                    <ul>
-                        <li><a href="">Amazon</a></li>
-                        <li><a href="">Shopee</a></li>
-                        <li><a href="">Mercado Livre</a></li>
+            <div class="botao-abrir-menu" id="botao-abrir">
+                <i class="bi bi-bag"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="botao-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+            <nav >
+                <ul>
+                    <li><a href="#">Amazon</a></li> 
+                    <li><a href="#">Mercado Livre</a></li> 
+                    <li><a href="#">Shopee</a></li>  
                     </ul>
-                </div>
-            </div>              
+                </nav>
+            </div>
+
+            <div class="overlay-menu" id="overlay-menu"></div>
+
+
+            
+            
+        </div> <!-- interface -->
+
+    </header>
+
+    <main>
+
+        <div class="resumo">
+            <div class="container">
+                <h1>Bem-vindo ao Achadinhos</h1>
+                <p>Somos uma plataforma dedicada a trazer para você as melhores ofertas da internet. De eletrônicos a moda, de artigos para casa a produtos de beleza, nossa missão é ajudá-lo a encontrar os melhores achados com descontos irresistíveis.</p>
+                <p>Navegue pelo nosso site e descubra uma variedade de produtos em destaque, explore diferentes categorias e fique por dentro das últimas novidades. Estamos aqui para tornar suas compras online mais econômicas e gratificantes.</p>
+                <a href="#destaques" class="btn">Ver Ofertas</a>
+            </div>
         </div>
-    </div>
 
-
+        <section id="destaques">
+            <div class="container">
+                <h2>Destaques</h2>
+                <!-- Aqui você pode adicionar os produtos em destaque -->
+                <div class="produtos">
+                    <!-- Produto 1 -->
+                    <div class="produto">
+                        <a href="#">
+                            <img src="imgs/acer-nitro.png" alt="Produto 1">
+                            <h3>Acer Nitro RTX 3050</h3>
+                            <p>Intel Core i5 12ª Geração, 8GB RAM, SSD 512GB, 144HZ, Windows 11 Home, Tela 15,6 Polegadas.</p>
+                            <span class="preco">A partir de: R$ 4291,61 <br></span>
+                            <button>Comprar</button>
+                        </a>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="produto">
+                        <a href="#">
+                            <img src="imgs/headset.png" alt="Produto 2">
+                            <h3>Produto 2</h3>
+                            <p>Descrição curta do produto 2.</p>
+                            <span class="preco">A partir de: XX <br></span>
+                            <button>Comprar</button>
+                        </a>
+                    </div>
+                    <!-- Produto 3 -->
+                    <div class="produto">
+                        <a href="#">
+                            <img src="imgs/mouse.png" alt="Produto 3">
+                            <h3>Produto 3</h3>
+                            <p>Descrição curta do produto 3.</p>
+                            <span class="preco">A partir de: XX <br></span>
+                            <button>Comprar</button>
+                        </a>
+                    </div>
+                    <!-- Produto 4 -->
+                    <div class="produto">
+                        <a href="#">
+                            <img src="caminho/para/imagem4.jpg" alt="Produto 4">
+                            <h3>Produto 4</h3>
+                            <p>Descrição curta do produto 4.</p>
+                            <span class="preco">A partir de: XX <br></span>
+                            <button>Comprar</button>
+                        </a>
+                    </div>
+                    <!-- Produto 5 -->
+                    <div class="produto">
+                        <a href="#">
+                            <img src="caminho/para/imagem5.jpg" alt="Produto 5">
+                            <h3>Produto 5</h3>
+                            <p>Descrição curta do produto 5.</p>
+                            <span class="preco">A partir de: XX <br></span>
+                            <button>Comprar</button>
+                        </a>
+                    </div>
+                    <!-- Produto 6 -->
+                    <div class="produto">
+                        <a href="#">
+                            <img src="caminho/para/imagem6.jpg" alt="Produto 6">
+                            <h3>Produto 6</h3>
+                            <p>Descrição curta do produto 6.</p>
+                            <span class="preco">A partir de: XX <br></span>
+                            <button>Comprar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     
     
-
-<header id="inicio">
-        <div class="content">
-            <div class="header-botao">
-                <div class="header-botao-esquerdo">
-                    <h2>Titulo aqui</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis cupiditate facilis <br> molestiae dignissimos reprehenderit qui, tempora alias, id nisi aperiam quo <br> rem itaque quas laborum aliquid earum in sunt eius?</p>
-                    <button>Ver agora</button>
-
-                </div>
-                <div class="header-botao-direito">
-                    <img src="imgs/dedo.png" alt="mão">
-                </div>
-
-            </div>
-
-        </div>
-</header>
-
-
-<main id="conteudo">
-        <div class="fundo">
-            <div class="content-pag">
-                <div class="colunas-pag">
-                <img src="imgs/acer-nitro.png" alt="Acer nitro 5">
-                <img src="imgs/headset.png" alt="Headset Redragon">
-                <img src="imgs/mouse.png" alt="Mouse g305 sem fio">
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="content-pag">
-                <h2>Melhores Ofertas</h2>
-                <div class="subtitulo-underline">
-
-                </div>
-                <div class="colunas-pag">
-                    <div class="produtos-pag">
-                            <img src="imgs/smartwatch.png" alt="Smartwatch">
-                            <p class="nome-produto">Smartwatch Amazfit Blue</p>
-                            <p class="preco-produto">Colocar preço aqui</p>
+        <section id="novidades">
+            <div class="container">
+                <h2>Novidades</h2>
+                <!-- Aqui você pode adicionar os produtos mais recentes -->
+                <div class="produtos">
+                    <!-- Produto 1 -->
+                    <div class="produto">
+                        <img src="caminho/para/imagem7.jpg" alt="Produto 7">
+                        <h3>Produto 7</h3>
+                        <p>Descrição curta do produto 7.</p>
+                        <span class="preco">R$ XX,XX</span>
+                        <button>Comprar</button>
                     </div>
-
-                    <div class="produtos-pag">
-                        <img src="imgs/ssd.png" alt="Ssd Wd Green 1TB">
-                        <p class="nome-produto">SSD Wd Green 1TB</p>
-                        <p class="preco-produto">Colocar preço aqui</p>
+                    <!-- Produto 2 -->
+                    <div class="produto">
+                        <img src="caminho/para/imagem8.jpg" alt="Produto 8">
+                        <h3>Produto 8</h3>
+                        <p>Descrição curta do produto 8.</p>
+                        <span class="preco">R$ XX,XX</span>
+                        <button>Comprar</button>
                     </div>
-
-                    <div class="produtos-pag">
-                        <img src="imgs/mousepad.png" alt="Mousepad RGB">
-                        <p class="nome-produto">Mousepad Grande RGB</p>
-                        <p class="preco-produto">Colocar preço aqui</p>
-                    </div>                    
-
+                    <!-- Produto 3 -->
+                    <div class="produto">
+                        <img src="caminho/para/imagem9.jpg" alt="Produto 9">
+                        <h3>Produto 9</h3>
+                        <p>Descrição curta do produto 9.</p>
+                        <span class="preco">R$ XX,XX</span>
+                        <button>Comprar</button>
+                    </div>
                 </div>
             </div>
+        </section>
 
-        </div>
-
-
+        <section id="recado">
+            <div class="container">
+                <h2>Obrigado por Visitar!</h2>
+                <p>Agradecemos por explorar o Achadinhos! Esperamos que você tenha encontrado ótimas ofertas e produtos interessantes durante sua visita. Se precisar de mais informações ou tiver alguma dúvida, não hesite em nos contatar.</p>
+                <p>Se deseja continuar sua jornada de compras, confira nossos destaques e novidades.</p>
+                <p>Explore uma variedade de produtos em diferentes lojas! Seja no Mercado Livre, Shopee ou Amazon, você encontrará ofertas incríveis. Clique nos links abaixo para ver os produtos disponíveis em cada loja:</p>
+                <ul>
+                    <li><a href="#">Amazon</a></li>
+                    <li><a href="#">Mercado Livre</a></li>
+                    <li><a href="shopee.html" target="_blank">Shopee</a></li>
+                </ul>
+            </div>
+        </section>
+        
+        
+        
 </main>
+    
+    
 
 <footer id="contato">
         <div class="footer-content">
@@ -115,32 +200,6 @@
             <p>Copyright | Todos os direitos reservados</p>
         </div>
 </footer>  
-
-<script>
-    document.getElementById('icone-compras').addEventListener('click', function(event) {
-        event.stopPropagation(); // Impede que o evento de clique seja propagado para o contêiner pai
-        
-        var listaCompras = document.getElementById('lista-compras');
-        var iconeCompras = document.getElementById('icone-compras');
-        
-        // Alternar a exibição da lista de compras
-        if (listaCompras.style.display === 'none') {
-            listaCompras.style.display = 'block';
-            listaCompras.style.top = (iconeCompras.offsetTop + iconeCompras.offsetHeight) + 'px'; // Posiciona a lista abaixo do ícone
-            listaCompras.style.left = iconeCompras.offsetLeft + 'px'; // Mantém a lista na mesma posição horizontal do ícone
-        } else {
-            listaCompras.style.display = 'none';
-        }
-    });
-
-    // Fecha a lista de compras se clicar fora dela
-    window.addEventListener('click', function(event) {
-        var listaCompras = document.getElementById('lista-compras');
-        if (event.target !== listaCompras && event.target !== document.getElementById('icone-compras')) {
-            listaCompras.style.display = 'none';
-        }
-    });
-</script>
 
 </body>
 </html>
