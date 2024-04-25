@@ -217,8 +217,9 @@ section#destaques h2 {
 .produto {
     width: calc(33.33% - 20px); /* Largura dos produtos */
     text-align: center; 
-    border: 1px solid rgba(0, 0, 0, 0.562);
+    border: 2px solid rgba(129, 9, 131, 0.562);
     border-radius: 8px; 
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     padding: 30px; 
     padding-bottom: 10px;
 }
@@ -235,6 +236,8 @@ section#destaques h2 {
 }
 
 .produto h3 {
+    color: blueviolet;
+    font-weight: 500;
     margin-bottom: 10px; 
 }
 
@@ -270,6 +273,7 @@ section#destaques h2 {
 
 section#novidades {
     padding: 50px 30px;
+    background-color:lightgray;
 }
 
 section#novidades h2 {
