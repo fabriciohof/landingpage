@@ -15,3 +15,12 @@ menu.addEventListener('click', ()=>{
 overlayMenu.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 })
+
+
+// rolagem suave botão
+
+document.getElementById('botao-oferta').addEventListener('click', function() {
+    document.getElementById('destaques').scrollIntoView({ behavior: 'smooth' });
+  });
+  
+
