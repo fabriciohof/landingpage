@@ -1,13 +1,8 @@
 @media screen and (max-width: 767px) {    
     /* Mobile responsive */
 
-    
-    .flex{
-        flex-direction: column;
-    }
-
     body,html {
-        width: 100%;
+        
         overflow-x: hidden;
     }
     
@@ -22,18 +17,111 @@
     }
 
     .logo h1 {
-        border-bottom: 2px solid black; 
-        padding-bottom: 10px; 
+        width: 100%;
+        font-size: 1.5rem;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .botao-abrir-menu i{
         display:block;
     }
-    
 
     .menu{
         display: none;
     }
 
+    #destaques {
+        text-align: center; 
+    }
+    
+    section#destaques .produtos{
+        display: block;        
+    }
+    .produtos .produto{
+        margin-bottom: 20px;
+        width: 300px;
+    }
+    section#destaques .container{
+        padding: 0;
+        display: inline-block; /* Permite que o container ocupe apenas o espaço necessário */
+        text-align: center; /* Alinha o conteúdo dentro do container */
+    }
+
+    section#destaques h2 {
+        text-align: center;  
+        margin-bottom: 30px;          
+    }
+
+    #novidades {
+        text-align: center; 
+    }
+
+    section#novidades .produtos{
+        display: block;        
+    }
+
+    section#novidades .container {
+        padding: 0;
+        display: inline-block; 
+        text-align: center;
+
+    }
+
+    section#novidades h2 {
+        text-align: center;  
+        margin-bottom: 30px; 
+
+    }
+
+    #recado ul {
+        display: block;
+        
+    }
+
+    #recado ul li {
+        margin-bottom: 40px;
+
+    }
+
+
+    /* Layout paginas */
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchInput{
+        margin-top: 10px;
+        width: 100%;        
+    }
+
+    header a {
+        white-space: nowrap;
+    }
 }
   
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchInput{
+        margin-top: 10px;
+        width: 100%;        
+    }
+
+    header a {
+        white-space: nowrap;
+    }
+
+    .produtos .produto{
+        margin-bottom: 20px;
+        width: 300px;
+        
+    }
+    
+
+} 
